@@ -1,0 +1,106 @@
+body {
+  font-size: 20px;
+}
+
+/* -- Google Fonts
+  font-family: 'Exo', sans-serif;
+  font-family: 'Slabo 27px', serif;
+*/
+
+/* page containers */
+.main {
+  margin: 0 auto;
+  background-color: lightgray;
+  padding: 1em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.head {
+  text-align: center;
+  margin: 1em;
+  background-color: blue;
+  padding: 0.25em;
+  color: white;
+  border-radius: .5em;
+}
+
+.list-cont {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  margin: auto;
+  width: 90%;
+}
+
+
+/* input styles */
+
+input[type=text] {
+   background-color: white;
+   min-height: 2.5em;
+   min-width: 300px;
+   font-size: .8em;
+   font-family: sans-serif;
+}
+input[type=checkbox] {
+ 
+}
+
+label {
+  font-size: .8em;
+  font-family: sans-serif;
+}
+
+.item-actions a {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  color: white;
+}
+
+.item {
+  display: flex; /*flex for each item */
+  flex-direction: row; /* row format */
+  justify-content: space-between; /* horz space */
+  align-items: center; /* verticle align in row*/
+  background-color: orange;
+  height: 2em;
+  border-radius: .5em;
+  padding: .5em;
+  margin-bottom: 1em;
+  line-height: 2.1em;
+}
+
+.item-content .edited label:after {
+  content: " edited";
+  text-transform: uppercase;
+  color: red;
+  font-size: 14px;
+  padding-left: 5px;
+}
+
+.delete {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  border-radius: .5em;
+  text-align: center;
+  margin-left: 1em;
+  width: 5em;
+  height: 2em;
+  font-family: sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* -- headings -- */
+h1 {
+  font-family: 'Exo', sans-serif;
+  font-size: 2em;
+  font-weight: 900;
+}
+
+
