@@ -1,5 +1,6 @@
 body {
   font-size: 20px;
+  min-width: 320px;
 }
 
 /* -- Google Fonts
@@ -15,15 +16,12 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
 
 .head {
   text-align: center;
-  margin: 1em;
-  background-color: blue;
-  padding: 0.25em;
+  background-color: #2d74a0;
   color: white;
   border-radius: .5em;
 }
@@ -31,21 +29,54 @@ body {
 .list-cont {
   display: flex;
   flex-direction: column;
-  align-content: space-between;
   margin: auto;
   width: 90%;
 }
 
+/* item styles */
+.item {
+  display: flex; /*flex for each item */
+  flex-direction: row; /* row format in mobile mode*/
+  flex-wrap: wrap;
+  justify-content: space-between; /* horz space */
+  align-items: center; /* verticle align in row*/
+  background-color: #00e034;
+  border-radius: .5em;
+  padding: .5em;
+  margin-bottom: 1em;
+  line-height: 2.1em;
+}
+
+@media (min-width: 300px) and (max-width: 825px) {
+  .item {
+    display: flex;
+    align-items: center;
+  }
+  .item-content {
+    margin-bottom: 1em;
+  }
+
+}
+
+@media (min-width: 600px) {
+  .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
 
 /* input styles */
 
 input[type=text] {
    background-color: white;
    min-height: 2.5em;
-   min-width: 300px;
+   min-width: 1em;
    font-size: .8em;
    font-family: sans-serif;
 }
+
 input[type=checkbox] {
  
 }
@@ -53,6 +84,7 @@ input[type=checkbox] {
 label {
   font-size: .8em;
   font-family: sans-serif;
+  overflow: hidden;
 }
 
 .item-actions a {
@@ -61,20 +93,11 @@ label {
   color: white;
 }
 
-.item {
-  display: flex; /*flex for each item */
-  flex-direction: row; /* row format */
-  justify-content: space-between; /* horz space */
-  align-items: center; /* verticle align in row*/
-  background-color: orange;
-  height: 2em;
-  border-radius: .5em;
-  padding: .5em;
-  margin-bottom: 1em;
-  line-height: 2.1em;
-}
 
-.item-content .edited label:after {
+
+@media ()
+
+.edited label:after {
   content: " edited";
   text-transform: uppercase;
   color: red;
