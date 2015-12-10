@@ -1,0 +1,13 @@
+       <div class="item"> 
+        <div class="item-content" ng-class="{'editing-item': editing, 'edited': todo.edited}">
+          <input ng-model="todo.completed" type="checkbox" />
+          <label ng-hide="editing" class="editing-label">{{todo.name}}</label>
+          <input ng-change="todo.edited = true" ng-blur="editing = false;" ng-show="editing" ng-model="todo.name" type="text" />
+        </div><!-- /item-content -->
+        <div class="item-actions">
+          <a href="" ng-click="editing = !editing">Edit</a>
+          <a href="" ng-click="helloConsole()">Save</a>
+          <a href="" class="delete">Delete</a>
+        </div><!-- /item-actions -->
+         
+       </div><!-- /single todo item -->
